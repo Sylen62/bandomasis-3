@@ -14,16 +14,3 @@ class API {
 			.catch(failure);
 	};
 }
-
-// const showError = (error) => console.error('Klaida:', error);
-
-// API.fetchCars(
-// 	(data) => console.log('Gauti duomenys:', data),
-// 	(error) => showError(error)
-// );
-
-// API.deleteCarById(
-// 	'1',
-// 	(data) => console.log('Sėkminai ištrinta:', data),
-// 	(error) => showError(error)
-// );

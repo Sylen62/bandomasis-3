@@ -16,11 +16,18 @@ class CarGridComponent {
 
 	getCars = () => API.fetchCars(this.saveCars, this.showError);
 
+	wrapChild = (element) => {
+		const wrapper = document.createElement('div');
+		wrapper.className = 'col-lg-6';
+		wrapper.append(element);
+		return wrapper;
+	};
+
 	init = () => {
 		this.state.loading = true;
 		setTimeout(this.getCars, 2000);
 		this.htmlElement = document.createElement('div');
-		this.htmlElement.className = 'row';
+		this.htmlElement.className = 'row g-3';
 		this.render();
 	};
 
@@ -32,15 +39,9 @@ class CarGridComponent {
 		} else if (cars.length > 0) {
 			this.htmlElement.innerHTML = '';
 			this.state.cars.forEach((car) => {
-				this.htmlElement.innerHTML += `
-        <div class="card w-25 p-0">
-          <img src="${car.img}" class="card-img-top h-50" />
-          <div class="card-body">
-            <h5 class="card-title">${car.model}</h5>
-            <p class="card-text">Brand: ${car.brand}</p>
-          </div>
-			  </div>
-        `;
+				const carCard = new CarCardComponent(car);
+				carCard.htmlElement = this.wrapChild(carCard.htmlElement);
+				this.htmlElement.appendChild(carCard.htmlElement);
 			});
 		}
 	};

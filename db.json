@@ -15,7 +15,7 @@
     {
       "id": "2",
       "brand": "BMW",
-      "model": "BMW X6",
+      "model": "X6",
       "year": 2021,
       "fuelTypes": "petrol",
       "price": {
