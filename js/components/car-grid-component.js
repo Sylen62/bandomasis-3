@@ -7,7 +7,7 @@ class CarGridComponent {
 		this.init();
 	}
 
-	showError = (error) => alert(error);
+	showError = (error) => console.error(error);
 
 	saveCars = (cars) => {
 		this.state = { cars, loading: false };
@@ -15,6 +15,8 @@ class CarGridComponent {
 	};
 
 	getCars = () => API.fetchCars(this.saveCars, this.showError);
+
+	deleteCar = (id) => API.deleteCarById(id, this.getCars, this.showError);
 
 	wrapChild = (element) => {
 		const wrapper = document.createElement('div');
@@ -39,7 +41,10 @@ class CarGridComponent {
 		} else if (cars.length > 0) {
 			this.htmlElement.innerHTML = '';
 			this.state.cars.forEach((car) => {
-				const carCard = new CarCardComponent(car);
+				const carCard = new CarCardComponent({
+					data: car,
+					onDelete: this.deleteCar,
+				});
 				carCard.htmlElement = this.wrapChild(carCard.htmlElement);
 				this.htmlElement.appendChild(carCard.htmlElement);
 			});

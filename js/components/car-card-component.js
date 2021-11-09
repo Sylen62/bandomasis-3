@@ -19,9 +19,10 @@ class CarCardComponent {
 	};
 
 	init = () => {
-		const { id, brand, model, year, fuelTypes, price, img } = this.props;
+		const { id, brand, model, year, fuelTypes, price, img } = this.props.data;
 		this.htmlElement = document.createElement('article');
-		this.htmlElement.className = 'card p-0 bg-dark text-white';
+		this.htmlElement.className =
+			'card p-0 bg-dark text-white position-relative';
 		this.htmlElement.innerHTML = `
       <img src="${img}" class="card-img-top" style="height:400px;object-fit: cover;" />
       <div class="card-body">
@@ -37,6 +38,9 @@ class CarCardComponent {
 					)} €</span>
         </div>
       </div>
+      <button class="btn btn-danger btn-sm position-absolute top-0 end-0 mt-2 me-2">✕</button>
     `;
+		const btn = this.htmlElement.querySelector('.btn');
+		btn.addEventListener('click', () => this.props.onDelete(id));
 	};
 }
