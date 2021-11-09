@@ -1,0 +1,64 @@
+{
+  "car": [
+    {
+      "id": "1",
+      "brand": "Tesla",
+      "model": "Model S",
+      "year": 2012,
+      "fuelTypes": "electric",
+      "price": {
+        "amount": 72600,
+        "currency": "$"
+      },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/TeslaModelSsedan.jpg"
+    },
+    {
+      "id": "2",
+      "brand": "BMW",
+      "model": "BMW X6",
+      "year": 2021,
+      "fuelTypes": "petrol",
+      "price": {
+        "amount": 87999,
+        "currency": "€"
+      },
+      "img": "https://media4.giphy.com/media/3o7TKI18q4s57zwODS/giphy.gif?cid=790b761122b24eca39d9618e771254d12b92daf7697069b0&rid=giphy.gif&ct=g"
+    },
+    {
+      "id": "3",
+      "brand": "Audi",
+      "model": "Q7",
+      "year": 2019,
+      "fuelTypes": "dysel",
+      "price": {
+        "amount": 656780,
+        "currency": "€"
+      },
+      "img": "https://media3.giphy.com/media/VvNhY8Oj8D6F6EdkCt/giphy.gif?cid=790b761165fc2ab18cf7e31f0f91bc44dbbc797decbf6c6f&rid=giphy.gif&ct=g"
+    },
+    {
+      "id": "4",
+      "brand": "Toyota",
+      "model": "Avalon",
+      "year": 1994,
+      "fuelTypes": "gas",
+      "price": {
+        "amount": 1600,
+        "currency": "$"
+      },
+      "img": "https://media1.giphy.com/media/uZ7ujnSoXlt28/giphy.gif?cid=790b761139ea40f50aa6f6978f78e0b5b1cb6e98b072a674&rid=giphy.gif&ct=g"
+    },
+    {
+      "id": "5",
+      "brand": "Ferrari",
+      "model": "SF90 Stradale",
+      "year": 2006,
+      "fuelTypes": "hybrid",
+      "price": {
+        "amount": 32800,
+        "currency": "€"
+      },
+      "img": "https://media1.giphy.com/media/7CC1GeNMZIRBKKKFIk/giphy.gif?cid=790b761146900a7412be3b4e55ba7f1efff4565710d7c564&rid=giphy.gif&ct=g"
+    }
+  ]
+}
